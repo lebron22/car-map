@@ -3,7 +3,7 @@ import { Map, TileLayer, Marker } from "react-leaflet";
 import { ICarObject } from "../../interfaces";
 import _ from "lodash";
 import PopupElement from "./PopupElement/PopupElement";
-import { icon } from "./Icons/Icons";
+import { availableIcon, unavailableIcon } from "./Icons/Icons";
 
 export interface MapElementProps {
   objects: [] | ICarObject[];
@@ -12,7 +12,7 @@ export interface MapElementProps {
 const MapElement: React.FC<MapElementProps> = ({ objects }) => {
   const [activeObject, setActiveObject] = useState<null | ICarObject>(null);
 
-  const renderMarkers = () =>
+  const renderObjectsMarkers = () =>
     _.map(objects, (object: ICarObject) => (
       <Marker
         key={object.id}
@@ -20,7 +20,7 @@ const MapElement: React.FC<MapElementProps> = ({ objects }) => {
         onClick={() => {
           setActiveObject(object);
         }}
-        icon={icon}
+        icon={object.status === "AVAILABLE" ? availableIcon : unavailableIcon}
       />
     ));
 
@@ -30,7 +30,7 @@ const MapElement: React.FC<MapElementProps> = ({ objects }) => {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
       />
-      {renderMarkers()}
+      {renderObjectsMarkers()}
       {activeObject && (
         <PopupElement
           activeObject={activeObject}
