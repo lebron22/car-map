@@ -30,7 +30,7 @@ const App: React.FC = () => {
 
   return (
     <>
-      <MapElement />
+      <MapElement objects={objects} />
       <Toolbar />
     </>
   );
