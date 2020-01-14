@@ -1,0 +1,46 @@
+//SWITCH ADJUSTMENTS HERE
+$input-bg-on: #5eb45f;
+$input-bg-off: #cbcbcb;
+$input-switch: #fefefe;
+
+$input-width: 4rem; //switch dimensions
+$transition-time: 0.4s;
+//END OF ADJUSTMENTS
+
+$input-radius: calc(#{$input-width} / 2);
+$input-height: calc(#{$input-width} / 2);
+
+.switch-input {
+  position: relative;
+  appearance: none;
+  width: $input-width;
+  height: $input-height;
+  background-color: $input-bg-off;
+  border-radius: $input-radius;
+  outline: none;
+  transition: background-color $transition-time ease,
+    box-shadow $transition-time ease;
+  box-shadow: 0 0 0 3px $input-bg-off;
+  margin: 0 20px;
+  cursor: pointer;
+
+  &:before {
+    position: absolute;
+    display: block;
+    content: "";
+    border-radius: 100%;
+    transition: transform $transition-time ease;
+    width: calc(#{$input-width} / 2);
+    height: $input-height;
+    background-color: $input-switch;
+  }
+
+  // active state below
+  &:checked {
+    background-color: $input-bg-on;
+    box-shadow: 0 0 0 3px $input-bg-on;
+    &:before {
+      transform: translateX(100%);
+    }
+  }
+}
