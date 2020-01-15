@@ -13,16 +13,23 @@ const Markers: React.FC<MarkersProps> = ({ setActiveObject }) => {
   const { objects } = useContext(ObjectContext);
 
   const renderObjectsMarkers = () =>
-    _.map(objects, (object: ICarObject) => (
-      <Marker
-        key={object.id}
-        position={[object.location.latitude, object.location.longitude]}
-        onClick={() => {
-          setActiveObject(object);
-        }}
-        icon={object.status === "AVAILABLE" ? availableIcon : unavailableIcon}
-      />
-    ));
+    _.map(
+      objects,
+      (object: ICarObject) =>
+        !object.hiddenByStatus &&
+        !object.hiddenByBatteryLevel && (
+          <Marker
+            key={object.id}
+            position={[object.location.latitude, object.location.longitude]}
+            onClick={() => {
+              setActiveObject(object);
+            }}
+            icon={
+              object.status === "AVAILABLE" ? availableIcon : unavailableIcon
+            }
+          />
+        )
+    );
 
   return <>{renderObjectsMarkers()}</>;
 };

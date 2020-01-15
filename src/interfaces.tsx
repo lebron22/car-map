@@ -2,8 +2,9 @@ export interface ICarObject {
   address: null | string;
   batteryLevelPct: number;
   color: string;
+  hiddenByStatus: boolean;
+  hiddenByBatteryLevel: boolean;
   id: string;
-  isVisible: boolean;
   location: {
     latitude: number;
     longitude: number;

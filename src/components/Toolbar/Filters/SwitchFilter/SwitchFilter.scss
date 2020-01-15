@@ -1,0 +1,29 @@
+.switch-filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  @media (min-width: 360px) {
+    padding: 10px;
+  }
+  flex-basis: 25%;
+  height: 100%;
+
+  &__icon {
+    width: 60px;
+    height: auto;
+    margin: 10px;
+    @media (min-width: 360px) {
+      width: 70px;
+    }
+  }
+
+  &__info {
+    font-size: 1.5rem;
+    text-align: center;
+    @media (min-width: 549px) {
+      font-size: 1.8rem;
+    }
+  }
+}

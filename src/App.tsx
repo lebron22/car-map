@@ -1,6 +1,5 @@
 import React from "react";
 import MapElement from "./components/Map/MapElement";
-import "./App.css";
 import Toolbar from "./components/Toolbar/Toolbar";
 import ObjectContextProvider from "./contexts/ObjectsContext";
 

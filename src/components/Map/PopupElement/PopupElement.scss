@@ -1,0 +1,15 @@
+.popup {
+  color: #283044;
+  &__name {
+    text-transform: uppercase;
+    margin: 10px 0;
+  }
+
+  &__plates {
+    color: #fff;
+    padding: 5px;
+    background-color: #283044;
+    border-radius: 10px;
+    font-size: 1.5rem;
+  }
+}

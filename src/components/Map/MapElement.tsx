@@ -3,6 +3,7 @@ import { Map, TileLayer } from "react-leaflet";
 import { ICarObject } from "../../interfaces";
 import PopupElement from "./PopupElement/PopupElement";
 import Markers from "./Markers/Markers";
+import "./Map.scss";
 
 export interface MapElementProps {}
 

@@ -1,0 +1,13 @@
+.leaflet-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.leaflet-touch .leaflet-control-layers,
+.leaflet-touch .leaflet-bar {
+  border: 2px solid rgba(#283044, 0.4);
+}
+
+.leaflet-bar a {
+  color: #283044;
+}
