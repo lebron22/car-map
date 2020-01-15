@@ -3,6 +3,7 @@ import { Map, TileLayer } from "react-leaflet";
 import { ICarObject } from "../../interfaces";
 import PopupElement from "./PopupElement/PopupElement";
 import Markers from "./Markers/Markers";
+import MarkerClusterGroup from "react-leaflet-markercluster";
 import "./Map.scss";
 
 export interface MapElementProps {}
@@ -17,7 +18,9 @@ const MapElement: React.FC<MapElementProps> = () => {
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
       />
 
-      <Markers setActiveObject={setActiveObject} />
+      <MarkerClusterGroup maxClusterRadius={30}>
+        <Markers setActiveObject={setActiveObject} />
+      </MarkerClusterGroup>
 
       {activeObject && (
         <PopupElement
