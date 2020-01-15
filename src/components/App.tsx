@@ -1,7 +1,7 @@
 import React from "react";
-import MapElement from "./components/Map/MapElement";
-import Toolbar from "./components/Toolbar/Toolbar";
-import ObjectContextProvider from "./contexts/ObjectsContext";
+import MapElement from "./Map/MapElement";
+import Toolbar from "./Toolbar/Toolbar";
+import ObjectContextProvider from "../contexts/ObjectsContext";
 
 const App: React.FC = () => {
   return (

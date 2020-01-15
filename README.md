@@ -1,44 +1,42 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Car map
 
-## Available Scripts
+- Markers clustering depends on map zoom level,
+- Markers (cars) divided into sections (available, unavailable),
+- Filter markers depends on availability status or battery level,
+- Display a popup with info about clicked marker,
+- Custom markers icons.
 
-In the project directory, you can run:
+## Live
 
-### `yarn start`
+(https://lebron22.github.io/car-map/)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technologies
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- ReactJS + Typescript
+- Leaflet
 
-### `yarn test`
+## Setup
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+For running this project on your local machine:
 
-### `yarn build`
+- [Node.js](https://nodejs.org/en/download/) is required.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Clone repo from [master branch](https://github.com/lebron22/car-map/)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- Then execute following commands on your terminal in the project directory:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+$ npm install
+```
 
-### `yarn eject`
+- Next you can run the application on your localhost:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+$ npm start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Build for production:
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+$ npm run build
+```
