@@ -1,12 +1,7 @@
 import React from "react";
 import { Popup } from "react-leaflet";
-import { ICarObject } from "../../../interfaces";
+import { PopupElementProps } from "../../../interfaces";
 import "./PopupElement.scss";
-
-export interface PopupElementProps {
-  activeObject: ICarObject;
-  setActiveObject: React.Dispatch<React.SetStateAction<ICarObject | null>>;
-}
 
 const PopupElement: React.FC<PopupElementProps> = ({
   activeObject: {
@@ -32,6 +27,12 @@ const PopupElement: React.FC<PopupElementProps> = ({
         <h2 className="popup__name">{name}</h2>
         {platesNumber.indexOf(" ") < 0 && (
           <span className="popup__plates">{platesNumber}</span>
+        )}
+        {color && (
+          <p className="popup__color">
+            Kolor:
+            <span style={{ backgroundColor: color }}></span>
+          </p>
         )}
         <p className="popup__sidenumber">
           {sideNumber.length === 3 && `Numer boczny: ${sideNumber}`}

@@ -1,10 +1,7 @@
 import React, { useState, useContext } from "react";
 import "./Switch.scss";
 import { ObjectContext } from "../../contexts/ObjectsContext";
-
-export interface SwitchProps {
-  type: string;
-}
+import { SwitchProps } from "../../interfaces";
 
 const Switch: React.FC<SwitchProps> = ({ type }) => {
   const [isChecked, setCheck] = useState<boolean>(true);

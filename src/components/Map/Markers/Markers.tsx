@@ -3,11 +3,7 @@ import _ from "lodash";
 import { Marker } from "react-leaflet";
 import { ObjectContext } from "../../../contexts/ObjectsContext";
 import { availableIcon, unavailableIcon } from "../Icons/Icons";
-import { ICarObject } from "../../../interfaces";
-
-export interface MarkersProps {
-  setActiveObject: React.Dispatch<React.SetStateAction<ICarObject | null>>;
-}
+import { ICarObject, MarkersProps } from "../../../interfaces";
 
 const Markers: React.FC<MarkersProps> = ({ setActiveObject }) => {
   const { objects } = useContext(ObjectContext);

@@ -6,9 +6,7 @@ import "./Toolbar.scss";
 import SwitchFilter from "./Filters/SwitchFilter/SwitchFilter";
 import RangeFilter from "./Filters/RangeFilter/RangeFilter";
 
-export interface ToolbarProps {}
-
-const Toolbar: React.FC<ToolbarProps> = () => {
+const Toolbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (

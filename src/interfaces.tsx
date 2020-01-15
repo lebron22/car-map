@@ -15,3 +15,33 @@ export interface ICarObject {
   sideNumber: string;
   status: string;
 }
+
+//CONTEXT INTERFACES
+
+export interface IObjectContextTheme {
+  objects: [] | ICarObject[];
+  setObjects: React.Dispatch<React.SetStateAction<[] | ICarObject[]>>;
+  filterByAvailabilityStatus: (status: string, value: boolean) => void;
+  filterByBatteryLevel: (batteryLevel: number) => void;
+}
+
+//COMPONENTS PROPS INTERFACES
+
+export interface MarkersProps {
+  setActiveObject: React.Dispatch<React.SetStateAction<ICarObject | null>>;
+}
+
+export interface PopupElementProps {
+  activeObject: ICarObject;
+  setActiveObject: React.Dispatch<React.SetStateAction<ICarObject | null>>;
+}
+
+export interface SwitchProps {
+  type: string;
+}
+
+export interface SwitchFilterProps {
+  icon: string;
+  title: string;
+  type: string;
+}

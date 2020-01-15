@@ -2,9 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import { ObjectContext } from "../../../../contexts/ObjectsContext";
 import "./RangeFilter.scss";
 
-export interface RangeFilterProps {}
-
-const RangeFilter: React.FC<RangeFilterProps> = () => {
+const RangeFilter: React.FC = () => {
   const [batteryLevel, setBatteryLevel] = useState<number>(0);
   const { filterByBatteryLevel } = useContext(ObjectContext);
 

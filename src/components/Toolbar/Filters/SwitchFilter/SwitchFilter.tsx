@@ -1,12 +1,7 @@
 import React from "react";
 import Switch from "../../../Switch/Switch";
 import "./SwitchFilter.scss";
-
-export interface SwitchFilterProps {
-  icon: string;
-  title: string;
-  type: string;
-}
+import { SwitchFilterProps } from "../../../../interfaces";
 
 const SwitchFilter: React.FC<SwitchFilterProps> = ({ icon, title, type }) => {
   return (

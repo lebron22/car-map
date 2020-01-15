@@ -6,13 +6,11 @@ import Markers from "./Markers/Markers";
 import MarkerClusterGroup from "react-leaflet-markercluster";
 import "./Map.scss";
 
-export interface MapElementProps {}
-
-const MapElement: React.FC<MapElementProps> = () => {
+const MapElement: React.FC = () => {
   const [activeObject, setActiveObject] = useState<null | ICarObject>(null);
 
   return (
-    <Map center={[52.187511, 20.930528]} zoom={19} maxZoom={19}>
+    <Map center={[52.187511, 20.930528]} zoom={10} maxZoom={19}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
